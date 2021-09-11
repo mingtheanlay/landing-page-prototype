@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+/* Global Style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+li a {
+  font-size: 1.7rem;
+}
+
+button {
+  min-width: 20rem;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: #4c6e97;
+  color: white;
+  padding: 1.6rem;
+}
+
+button:hover {
+  color: #ffffff;
+  background-color: #111b27;
+  cursor: pointer;
+}
+
+/* Navigation Style */
+
+.main-head {
+  background-color: #111b27;
+  color: #ffffff;
+}
+
+nav {
+  min-height: 10vh;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  max-width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 30rem;
+}
+
+#logo {
+  font-size: 2.8rem;
+  font-family: "Sora", sans-serif;
+  flex: 2 1 30rem;
+}
+
+/* Hero Style */
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url(./img/landing-page.jpg);
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 6rem;
+}
+
+.hero p {
+  font-size: 3rem;
+  margin-top: 1.6rem;
+  margin-bottom: 5rem;
+}
+
+/* Media query */
+
+@media screen and (max-width: 935px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    font-size: 4rem;
+    padding: 2rem;
+  }
+  .hero p {
+    margin-bottom: 3rem;
+  }
+  button {
+    min-height: 5rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  nav {
+    text-align: left;
+  }
+}
