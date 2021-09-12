@@ -15,6 +15,7 @@ body {
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -34,6 +35,7 @@ button {
   background-color: #4c6e97;
   color: white;
   padding: 1.6rem;
+  transition: background 0.5s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 button:hover {
@@ -100,7 +102,66 @@ nav ul {
   margin-bottom: 5rem;
 }
 
-/* Media query */
+/* Benefit Style */
+
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.locations-head {
+  font-size: 2.5rem;
+  width: 90%;
+  margin: auto;
+}
+
+.locations-head h2 {
+  padding: 1rem 0;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5;
+}
+
+.locations-head p {
+  padding: 1rem 0;
+}
+
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  pointer-events: none; /* prevent image from being selected */
+}
+
+.moving-cloud-1 {
+  animation: cloud-animation 7s infinite alternate ease-in-out;
+}
+
+.moving-cloud-2 {
+  top: 10%;
+  z-index: -1;
+  opacity: 0.5;
+  animation: cloud-animation 10s infinite alternate ease-in-out;
+}
+
+/* Animation Keyframes */
+
+@keyframes cloud-animation {
+  from {
+    transform: translate(10%, -5%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* Media Query */
 
 @media screen and (max-width: 935px) {
   html {
@@ -119,6 +180,24 @@ nav ul {
   button {
     min-height: 5rem;
     padding: 1rem;
+  }
+  #locations {
+    text-align: center;
+  }
+  .locations-head {
+    background: rgba(17, 27, 39, 0.9);
+    background-clip: text;
+    -webkit-text-fill-color: white;
+    padding: 4rem 1rem;
+  }
+  .cloud {
+    height: 40rem;
+  }
+  #locations .moving-cloud-1 {
+    z-index: -1;
+  }
+  .moving-cloud-1 {
+    z-index: -2;
   }
 }
 
