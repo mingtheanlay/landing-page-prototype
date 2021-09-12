@@ -193,10 +193,10 @@ nav ul {
   .cloud {
     height: 40rem;
   }
-  #locations .moving-cloud-1 {
+  .moving-cloud-1 {
     z-index: -1;
   }
-  .moving-cloud-1 {
+  .moving-cloud-2 {
     z-index: -2;
   }
 }
