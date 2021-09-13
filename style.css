@@ -49,6 +49,9 @@ button:hover {
 .main-head {
   background-color: #111b27;
   color: #ffffff;
+  top: 0;
+  position: sticky;
+  z-index: 3;
 }
 
 nav {
@@ -150,6 +153,172 @@ nav ul {
   animation: cloud-animation 10s infinite alternate ease-in-out;
 }
 
+/* Benefits Style */
+
+#benefits {
+  min-height: 100vh;
+}
+
+.benefits-head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  min-height: 30vh;
+  background: #343c44;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.benefits-head h2 {
+  font-size: 5rem;
+  padding: 1rem;
+}
+
+.benefits-head p {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+  width: 90%;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.card {
+  min-height: 50vh;
+  margin: 2rem 5rem;
+  text-align: center;
+  flex: 1 1 25rem;
+  box-shadow: 0px 10px 10px rgba(94, 94, 94, 0.1),
+    0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 3.5rem;
+  padding-top: 2rem;
+}
+
+.card p {
+  font-size: 2rem;
+  padding: 3rem;
+}
+
+.card img {
+  min-height: 10rem;
+  max-width: 25%;
+  padding: 2rem;
+}
+
+.card-icon {
+  background-color: #27394e;
+}
+
+/* Contact Style */
+
+#contact {
+  min-height: 100vh;
+  background: url(./img/contact-mountain.png),
+    linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-head {
+  font-size: 3rem;
+  padding: 3.5rem;
+}
+
+.name-form,
+.email-form {
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 3rem;
+}
+
+.form-wrapper {
+  background: rgba(19, 28, 39, 0.8);
+  color: white;
+  min-width: 50vw;
+  border-radius: 20px;
+}
+
+.form-wrapper label {
+  margin-right: 3rem;
+  justify-content: end;
+}
+
+.form-wrapper button {
+  padding: 2rem;
+  margin-top: 5rem;
+  min-width: 100%;
+  border-radius: 0px 0px 20px 20px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.form-wrapper input {
+  min-width: 20vw;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+}
+
+/* Footer Style */
+
+footer {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  background: #111b27;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.footer-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-wrapper h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 3rem;
+  flex: 2 1 40rem;
+}
+
+.footer-wrapper ul {
+  text-decoration: none;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  flex: 1 1 40rem;
+}
+
 /* Animation Keyframes */
 
 @keyframes cloud-animation {
@@ -199,10 +368,27 @@ nav ul {
   .moving-cloud-2 {
     z-index: -2;
   }
+  footer {
+    text-align: center;
+  }
+  .form-wrapper {
+    width: 100%;
+  }
+  .footer-wrapper h2 {
+    font-size: 4rem;
+    padding: 2rem 0rem;
+  }
+  .footer-wrapper ul {
+    padding: 2rem 0rem;
+  }
 }
 
 @media screen and (width: 768px) {
   nav {
     text-align: left;
+  }
+  .footer-wrapper h2 {
+    text-align: left;
+    align-items: center;
   }
 }
